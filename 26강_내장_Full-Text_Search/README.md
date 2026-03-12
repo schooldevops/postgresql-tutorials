@@ -7,13 +7,13 @@
 graph LR
     FTS[PostgreSQL Full-Text Search 엔진]
     
-    Doc["원본 텍스트:\n'나는 데이터베이스에서 \n아름다운 고양이를 찾았다'"] --> FTS
+    Doc["원본 텍스트: 나는 데이터베이스에서 아름다운 고양이를 찾았다"] --> FTS
     
-    FTS -->|1. 형태소 분석 및 불용어 제거| TSVector["tsvector (본문 문맥 조각화)\n'나':1, '데이터베이스':2, '고양이':3, '찾':4"]
+    FTS -->|1. 형태소 분석 및 불용어 제거| TSVector["tsvector 본문 문맥 조각화: 나 1, 데이터베이스 2, 고양이 3, 찾 4"]
     
-    UserQuery["질문: '고양이 데이터베이스'"] --> TSQuery["tsquery (질의 변환)\n'고양이' & '데이터베이스'"]
+    UserQuery["질문: 고양이 데이터베이스"] --> TSQuery["tsquery 질의 변환: 고양이 AND 데이터베이스"]
     
-    TSVector -->|"@@ 매칭 연산자 판별"| Match{일치 여부 확인\n및 랭킹(순위) 산출}
+    TSVector -->|"@@" 매칭 연산자 판별| Match{일치 여부 확인 및 랭킹 산출}
     TSQuery --> Match
     
     Match --> Result["결과 반환 및 GIN 역색인 인덱스 스캔"]

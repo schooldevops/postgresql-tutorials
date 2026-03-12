@@ -7,14 +7,14 @@
 graph TD
     HybridSearch[궁극의 RAG 검색: 듀얼 코어 하이브리드 파이프라인]
     
-    UserQuery["사용자 질문: '환불은 어떻게 받나요?'"]
+    UserQuery["사용자 질문: 환불은 어떻게 받나요?"]
     
-    UserQuery --> |1. 단순 텍스트 Query| BM25["PgSearch (ParadeDB / TSVector)\n정확한 '키워드(환불)' 고속 색출\n-> BM25 Score 산출"]
+    UserQuery --> |1. 단순 텍스트 Query| BM25["PgSearch ParadeDB / TSVector\n정확한 키워드 고속 색출\nBM25 Score 산출"]
     
-    UserQuery --> |2. Embedding (배열 변환)| VecSearch["PgVector (HNSW)\n'교환', '돈을 돌려받다' 등 의미가 비슷한 문맥 색출\n-> Cosine Distance 산출"]
+    UserQuery --> |2. Embedding 배열 변환| VecSearch["PgVector HNSW\n교환, 돈을 돌려받다 등 의미가 비슷한 문맥 색출\nCosine Distance 산출"]
     
-    BM25 --> |BM25 검색 등수 (ex: 2등)| RRF_Combine["[RRF 스코어 병합]\n수식: 1 / (60 + BM25 순위) \n+ 1 / (60 + Vector 순위)"]
-    VecSearch --> |Vector 검색 등수 (ex: 1등)| RRF_Combine
+    BM25 --> |BM25 검색 등수| RRF_Combine["RRF 스코어 병합\n수식: 1 / 60 + BM25 순위 \n+ 1 / 60 + Vector 순위"]
+    VecSearch --> |Vector 검색 등수| RRF_Combine
     
     RRF_Combine --> FinalRank["가장 완벽한 최종 상위 3개 문서 선별"]
 ```
