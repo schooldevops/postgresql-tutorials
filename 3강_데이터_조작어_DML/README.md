@@ -13,7 +13,7 @@ graph TD
     
     InsertCmd --> SingleRow[단일행 삽입]
     InsertCmd --> MultiRow[다중행 삽입\nMulti-row Insert]
-    InsertCmd --> Upsert[충돌 제어 방식\nON CONFLICT (UPSERT)]
+    InsertCmd --> Upsert["충돌 제어 방식\nON CONFLICT (UPSERT)"]
     
     UpdateCmd --> WhereCond[조건부 수정\nWHERE 절]
     DeleteCmd --> WhereCond2[조건부 삭제\nWHERE 절]
