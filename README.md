@@ -6,7 +6,7 @@
 | 강좌 | 주제 | 핵심 내용 |
 | :--- | :--- | :--- |
 | [**1강**](./1강_PostgreSQL_아키텍처와_시작/README.md) | PostgreSQL 아키텍처와 시작 | 설치, 기본 구조(Process, Memory), psql 도구 사용법 |
-| **2강** | 데이터 타입과 DDL | 정수, 문자, 날짜형 및 테이블/스키마 생성과 수정 |
+| [**2강**](./2강_데이터_타입과_DDL/README.md) | 데이터 타입과 DDL | 정수, 문자, 날짜형 및 테이블/스키마 생성과 수정 |
 | **3강** | 데이터 조작어 (DML) | INSERT, UPDATE, DELETE 기초 및 RETURNING 절 |
 | **4강** | 조건부 검색과 연산자 | SELECT, WHERE, LIKE, IN, NULL 처리 방식 |
 | **5강** | 데이터 정렬과 페이징 | ORDER BY, LIMIT, OFFSET을 활용한 실무 페이징 처리 |
