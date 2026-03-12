@@ -8,13 +8,13 @@
 | [**1강**](./1강_PostgreSQL_아키텍처와_시작/README.md) | PostgreSQL 아키텍처와 시작 | 설치, 기본 구조(Process, Memory), psql 도구 사용법 |
 | [**2강**](./2강_데이터_타입과_DDL/README.md) | 데이터 타입과 DDL | 정수, 문자, 날짜형 및 테이블/스키마 생성과 수정 |
 | [**3강**](./3강_데이터_조작어_DML/README.md) | 데이터 조작어 (DML) | INSERT, UPDATE, DELETE 기초 및 RETURNING 절 |
-| **4강** | 조건부 검색과 연산자 | SELECT, WHERE, LIKE, IN, NULL 처리 방식 |
-| **5강** | 데이터 정렬과 페이징 | ORDER BY, LIMIT, OFFSET을 활용한 실무 페이징 처리 |
-| **6강** | 다중 테이블 연결 (JOIN) | INNER, LEFT/RIGHT OUTER, FULL OUTER JOIN |
-| **7강** | 집계 함수와 데이터 그룹화 | GROUP BY, HAVING, COUNT, SUM, AVG 연산 |
-| **8강** | 서브쿼리와 공통 테이블 식 | 스칼라/인라인 뷰 서브쿼리, CTE(WITH 절) 작성법 |
-| **9강** | 무결성과 제약 조건 | Primary Key, Foreign Key, UNIQUE, CHECK 설정 |
-| **10강** | 트랜잭션의 이해 | ACID 특성, COMMIT, ROLLBACK 기초 |
+| [**4강**](./4강_조건부_검색과_연산자/README.md) | 조건부 검색과 연산자 | SELECT, WHERE, LIKE, IN, NULL 처리 방식 |
+| [**5강**](./5강_데이터_정렬과_페이징/README.md) | 데이터 정렬과 페이징 | ORDER BY, LIMIT, OFFSET을 활용한 실무 페이징 처리 |
+| [**6강**](./6강_다중_테이블_연결_JOIN/README.md) | 다중 테이블 연결 (JOIN) | INNER, LEFT/RIGHT OUTER, FULL OUTER JOIN |
+| [**7강**](./7강_집계_함수와_데이터_그룹화/README.md) | 집계 함수와 데이터 그룹화 | GROUP BY, HAVING, COUNT, SUM, AVG 연산 |
+| [**8강**](./8강_서브쿼리와_공통_테이블_식/README.md) | 서브쿼리와 공통 테이블 식 | 스칼라/인라인 뷰 서브쿼리, CTE(WITH 절) 작성법 |
+| [**9강**](./9강_무결성과_제약_조건/README.md) | 무결성과 제약 조건 | Primary Key, Foreign Key, UNIQUE, CHECK 설정 |
+| [**10강**](./10강_트랜잭션의_이해/README.md) | 트랜잭션의 이해 | ACID 특성, COMMIT, ROLLBACK 기초 |
 
 ---
 
